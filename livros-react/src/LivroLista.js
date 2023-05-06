@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import ControleLivro from './controle/ControleLivros'
 import { getNomeEditora } from './controle/ControleEditora';
+import 'bootstrap';
 
 function LinhaLivro(props) {
   const { livro, excluir } = props;
@@ -12,8 +13,8 @@ function LinhaLivro(props) {
       <td>{livro.autor.map((autor, index) => <li key={index}>{autor}</li>)}</td>
       <td>{nomeEditora}</td>
       <td>{livro.ano}</td>
-      <td>
-        <button onClick={() => excluir(livro.codigo)}>Excluir</button>
+      <td className='.bg-danger'>
+        <button type="button" class="btn btn-danger" onClick={() => excluir(livro.codigo)}>Excluir</button>
       </td>
     </tr>
   );
@@ -39,11 +40,11 @@ export default function LivroLista() {
 
   return (
     <main>
-      <h1>Livros</h1>
-      <table>
-        <thead>
+      <h1>Catálogo de Livros</h1>
+      <table class="table">
+        <thead class="thead-dark">
           <tr>
-            <th>Título</th>
+            <th scope="col">Título</th>
             <th>Autor</th>
             <th>Editora</th>
             <th>Ano</th>
