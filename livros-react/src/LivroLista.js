@@ -5,8 +5,8 @@ import ControleEditora from './controle/ControleEditora';
 
 function LinhaLivro(props) {
   const { livro, excluir } = props;
-  const controleEditora = new ControleEditora();
-  const nomeEditora = controleEditora.getNomeEditora(livro.codEditora);
+  const nomeEditora = ControleEditora.getNomeEditora(livro.codEditora);
+
   return (
     <tr>
       <td>{livro.titulo}</td>
@@ -24,6 +24,7 @@ export default function LivroLista() {
   const [livros, setLivros] = useState([]);
   const [carregado, setCarregado] = useState(false);
 
+  
   const controleLivro = useMemo(() => new ControleLivro(), []);
 
   useEffect(() => {
