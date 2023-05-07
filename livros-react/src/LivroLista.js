@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import ControleLivro from './controle/ControleLivros'
-import 'bootstrap';
+
 
 function LinhaLivro(props) {
   const { livro, excluir } = props;
@@ -40,7 +40,7 @@ export default function LivroLista() {
   return (
     <main>
       <h1>Catálogo de Livros</h1>
-      <table class="table table-striped w-75">
+      <table class="table table-striped ">
         <thead class="thead-dark">
           <tr>
             <th >Título</th>
