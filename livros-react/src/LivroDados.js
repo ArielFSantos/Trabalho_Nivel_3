@@ -4,12 +4,15 @@ import ControladorLivro from './controle/ControleLivros';
 import { getEditoras } from "./controle/ControleEditora";
 
 function LivroDados() {
+
+    
   const controleLivro = new ControladorLivro();
   const [titulo, setTitulo] = useState('');
   const [resumo, setResumo] = useState('');
   const [autores, setAutores] = useState('');
   const [codEditora, setCodEditora] = useState('');
   const [opcoes, setOpcoes] = useState([]);
+  
 
   const navigate = useNavigate();
 
@@ -29,6 +32,7 @@ function LivroDados() {
     controleLivro.incluir(livro);
     navigate('/');
   }
+
 
   useState(() => {
     const editoras = getEditoras();
