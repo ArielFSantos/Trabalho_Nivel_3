@@ -13,7 +13,7 @@ function LinhaLivro(props) {
       </div>
       </td>
       <td>{livro.resumo}</td>
-      <td>{livro.autor.map((autor, index) => <li key={index}>{autor}</li>)}</td>
+      <td>{livro.autor}</td>
       <td>{livro.editora}</td>
     </tr>
   );

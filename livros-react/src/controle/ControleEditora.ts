@@ -1,6 +1,6 @@
 import { Editora } from '../modelo/Editora';
 
-export let editoras: Array<Editora> = [
+let editoras: Array<Editora> = [
   { codEditora: 1, nome: 'Martins Fontes' },
   { codEditora: 2, nome: 'Editora Aleph' },
   { codEditora: 3, nome: 'Suma' },
