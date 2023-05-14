@@ -8,9 +8,9 @@ function LinhaLivro(props) {
   return (
     <tr>
       <td>{livro.titulo} 
-      <div className='.bg-danger'>
-        <button type="button" class="btn btn-danger" onClick={() => excluir(livro.codigo)}>Excluir</button>
-      </div>
+        <div className='.bg-danger'>
+          <button type="button" class="btn btn-danger" onClick={() => excluir(livro.codigo)}>Excluir</button>
+        </div>
       </td>
       <td>{livro.resumo}</td>
       <td>{livro.autor}</td>
@@ -18,7 +18,6 @@ function LinhaLivro(props) {
     </tr>
   );
 }
-
 export default function LivroLista() {
   const [livros, setLivros] = useState([]);
   const [carregado, setCarregado] = useState(false);

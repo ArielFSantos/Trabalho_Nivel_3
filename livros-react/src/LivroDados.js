@@ -26,8 +26,10 @@ function LivroDados() {
       codLivro: 0,
       titulo,
       resumo,
-      autores: autores.split('\n'),
-      codEditora
+      autor: autores,
+      codEditora,
+    
+  
     };
     controleLivro.incluir(livro);
     navigate('/');
