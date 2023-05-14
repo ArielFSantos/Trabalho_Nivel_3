@@ -7,18 +7,12 @@ let editoras: Array<Editora> = [
 ];
 
 class ControleEditora {
-  obterLivros(): Array<Editora> {
+  getEditoras(): Array<Editora> {
     return editoras;
   }
 }
 export function getEditoras(): Array<Editora> {
   return editoras;
-}
-
-
-export function getNomeEditora(codEditora: number): string {
-  const editora = editoras.find((e) => e.codEditora === codEditora);
-  return editora ? editora.nome : '';
 }
 
 export default ControleEditora;

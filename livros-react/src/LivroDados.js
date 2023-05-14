@@ -28,8 +28,8 @@ function LivroDados() {
   }
 
   useEffect(() => {
-    const editoras = getEditoras();
-    const opcoes = editoras.map(editora => ({
+    const editora = getEditoras();
+    const opcoes = editora.map(editora => ({
       value: editora.codEditora,
       text: editora.nome
     }));
