@@ -51,6 +51,7 @@ function LivroDados() {
         <div className="form-group">
           <label htmlFor="editora">Editora:</label>
           <select className="form-control" id="editora" value={editora} onChange={e => setEditora(e.target.value)}>
+          <option value="" disabled selected>Selecione a Editora</option>
             {opcoes.map(opcao => (
               <option key={opcao.value} value={opcao.text}>{opcao.text}</option>
             ))}
