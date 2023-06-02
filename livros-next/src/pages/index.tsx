@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Menu from '../../componentes/Menu';
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 const Home: React.FC = () => {
   return (
@@ -10,10 +12,11 @@ const Home: React.FC = () => {
 
       <Menu />
 
-      <main className="styles.main">
-        <h1 className="styles.title">Página Inicial</h1>
+      <main className="main">
+        <h1 className="title">Página Inicial</h1>
       </main>
     </div>
+    
   );
 };
 

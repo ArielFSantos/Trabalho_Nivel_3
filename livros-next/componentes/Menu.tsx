@@ -1,8 +1,9 @@
 import Link from 'next/link';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const Menu: React.FC = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
     <Link href="/" passHref>
         Home
@@ -32,5 +33,6 @@ const Menu: React.FC = () => {
     </nav>
   );
 };
+
 
 export default Menu;
