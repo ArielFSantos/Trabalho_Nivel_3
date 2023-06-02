@@ -10,8 +10,8 @@ const Home: React.FC = () => {
 
       <Menu />
 
-      <main className="main">
-        <h1 className="title">Página Inicial</h1>
+      <main className="styles.main">
+        <h1 className="styles.title">Página Inicial</h1>
       </main>
     </div>
   );
