@@ -1,4 +1,7 @@
 export class Livro {
+    static map(arg0: (livro: any) => import("react").JSX.Element): import("react").ReactNode {
+      throw new Error('Method not implemented.');
+    }
     codigo: number;
     codEditora: number;
     editora:string;

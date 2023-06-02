@@ -6,7 +6,7 @@ let editoras: Array<Editora> = [
   { codEditora: 3, nome: 'Suma' },
 ];
 
-class ControleEditora {
+export class ControleEditora {
   getEditoras(): Array<Editora> {
     return editoras;
   }
