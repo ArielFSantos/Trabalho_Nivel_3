@@ -9,7 +9,7 @@ const Menu: React.FC = () => {
         Home
     </Link>
         <Link href="/" passHref>
-          Catálogo
+           Catálogo
         </Link>
         <Link href="/" passHref>
           Novo
