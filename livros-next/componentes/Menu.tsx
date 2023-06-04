@@ -3,34 +3,21 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 const Menu: React.FC = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container">
-    <Link href="/" passHref>
-        Home
-    </Link>
-        <Link href="/" passHref>
-           Catálogo
-        </Link>
-        <Link href="/" passHref>
-          Novo
-        </Link>
-
-        <div className="collapse navbar-collapse">
-          <ul className="navbar-nav mr-auto">
+    <div className="container">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+          <ul className="navbar-nav">
             <li className="nav-item">
-              <Link href="/livrolista" passHref>
-               Livro Lista
-              </Link>
+              <Link className="nav-link" href="/" passHref> Home</Link>
             </li>
             <li className="nav-item">
-              <Link href="/livrodados" passHref>
-                Livro Dados
-              </Link>
+              <Link  className="nav-link" href="/" passHref>Catálogo </Link>
+            </li>
+            <li className="nav-item">
+              <Link  className="nav-link" href="/" passHref>Novo</Link>
             </li>
           </ul>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 };
 

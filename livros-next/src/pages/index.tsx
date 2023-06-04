@@ -7,13 +7,13 @@ const Home: React.FC = () => {
   return (
     <div className="container">
       <Head>
-        <title>Loja Next</title>
+        <title>Home</title>
       </Head>
 
       <Menu />
 
       <main className="main">
-        <h1 className="title">Página Inicial</h1>
+        <h1   className="title align-middle" >Página Inicial</h1>
       </main>
     </div>
     
