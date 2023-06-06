@@ -10,10 +10,10 @@ const Menu: React.FC = () => {
               <Link className="nav-link" href="index.tsx" passHref>Home</Link>
             </li>
             <li className="nav-item">
-              <Link  className="nav-link" href="/LinhaLivroProps" passHref>Catálogo</Link>
+              <Link  className="nav-link" href="/LivroLista" passHref>Catálogo</Link>
             </li>
             <li className="nav-item">
-              <Link  className="nav-link" href="/" passHref>Novo</Link>
+              <Link  className="nav-link" href="LivroDados" passHref>Novo</Link>
             </li>
           </ul>
       </nav>
