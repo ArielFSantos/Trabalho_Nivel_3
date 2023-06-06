@@ -59,7 +59,7 @@ const LivroLista:NextPage = () => {
           <tbody>
             {livros.map((livro: any) => (
               <tr key={livro.codigo}>
-                <td>{livro.titulo} <br />
+                <td>{livro.titulo} <br/>
                 <button
                   type="button"
                   className="btn btn-danger"
