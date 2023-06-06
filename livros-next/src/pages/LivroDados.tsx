@@ -68,11 +68,11 @@ const LivroDados: React.FC = () => {
       </Head>
       <Menu />
       <main className="container" >
-        <h1>Página de Dados do Livro</h1>
+        <h1>Dados do Livro</h1>
         <form onSubmit={incluir}>
-          <div>
-            <label htmlFor="titulo">Título:</label>
-            <input
+          <div className="form-group">
+            <label  htmlFor="titulo">Título:</label>
+            <input className="form-control"
               type="text"
               id="titulo"
               value={titulo}
@@ -80,8 +80,8 @@ const LivroDados: React.FC = () => {
             />
           </div>
           <div>
-            <label htmlFor="resumo">Resumo:</label>
-            <textarea
+            <label  htmlFor="resumo">Resumo:</label>
+            <textarea className="form-control"
               id="resumo"
               value={resumo}
               onChange={(e) => setResumo(e.target.value)}
@@ -89,7 +89,7 @@ const LivroDados: React.FC = () => {
           </div>
           <div>
             <label htmlFor="autores">Autores:</label>
-            <textarea
+            <textarea className="form-control"
               id="autores"
               value={autores}
               onChange={(e) => setAutores(e.target.value)}
@@ -97,7 +97,7 @@ const LivroDados: React.FC = () => {
           </div>
           <div>
             <label htmlFor="editora">Editora:</label>
-            <select id="editora" value={codEditora} onChange={tratarCombo}>
+            <select  className="form-control"id="editora" value={codEditora} onChange={tratarCombo}>
               {opcoes.map((opcao) => (
                 <option key={opcao.value} value={opcao.value}>
                   {opcao.text}
@@ -105,7 +105,8 @@ const LivroDados: React.FC = () => {
               ))}
             </select>
           </div>
-          <button type="submit">Incluir</button>
+          <br />
+          <button className="btn btn-primary" type="submit">Incluir</button>
         </form>
       </main>
     </div>

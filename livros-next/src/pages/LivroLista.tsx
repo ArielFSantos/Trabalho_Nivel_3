@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Menu from '../../componentes/Menu';
-import styles from '../styles/Home.module.css';
 import { NextPage } from 'next';
 import React from 'react';
+
 
 
 const baseURL = "http://localhost:3000/api/livros";
@@ -34,9 +34,12 @@ const LivroLista:NextPage = () => {
   }, [carregado]);
 
   const excluir = async (codigo: number) => {
-    await excluirLivro(codigo);
-    setCarregado(false);
+    const excluidoComSucesso = await excluirLivro(codigo);
+    if (excluidoComSucesso) {
+      setLivros(livros.filter((livro: any) => livro.codigo !== codigo));
+    }
   };
+  
 
   return (
     <div>
@@ -45,32 +48,32 @@ const LivroLista:NextPage = () => {
       </Head>
       <Menu />
       <main className="container">
-        <h1>Página de Lista de Livros</h1>
+        <h1>Catálogo de Livros</h1>
         <table className="table table-striped">
-          <thead>
+          <thead className='.thead-dark'>
             <tr>
               <th>Título</th>
               <th className="w-50 p-2">Resumo</th>
               <th>Autor</th>
               <th>Editora</th>
-              <th>Ações</th>
             </tr>
           </thead>
           <tbody>
             {livros.map((livro: any) => (
               <tr key={livro.codigo}>
-                <td>{livro.titulo}</td>
-                <td>{livro.resumo}</td>
-                <td>{livro.autor}</td>
-                <td>{livro.editora}</td>
-                <td>
-                  <button
+                <td>{livro.titulo} <br />
+                <button
                     type="button"
                     className="btn btn-danger"
                     onClick={() => excluir(livro.codigo)}
                   >
                     Excluir
-                  </button>
+                  </button></td>
+                <td>{livro.resumo}</td>
+                <td>{livro.autor}</td>
+                <td>{livro.editora}</td>
+                <td>
+                  
                 </td>
               </tr>
             ))}

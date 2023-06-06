@@ -10,8 +10,8 @@ const Home: React.FC = () => {
       </Head>
       <Menu />
       
-      <main className="d-flex align-items-center justify-content-center vh-100">
-        <h1 className="text-center" >Página Inicial</h1>
+      <main> 
+        <h1 className="d-flex align-items-center justify-content-center vh-100" >Página Inicial</h1>
       </main>
     </div>
   );
