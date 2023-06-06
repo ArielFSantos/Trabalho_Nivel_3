@@ -13,11 +13,7 @@ const obter = async () => {
 
 const excluirLivro = async (codigo: number) => {
   const resposta = await fetch(baseURL, {
-    method: 'DELETE',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    
+    method: 'DELETE',    
   });
   return resposta.ok;
 };
@@ -52,12 +48,12 @@ const LivroLista:NextPage = () => {
       <main className="container">
         <h1>Catálogo de Livros</h1>
         <table className="table table-striped">
-          <thead className='.thead-dark'>
+          <thead className=".bg-dark">
             <tr>
-              <th>Título</th>
-              <th className="w-50 p-2">Resumo</th>
-              <th>Autor</th>
-              <th>Editora</th>
+              <th className="p-3 mb-2 bg-dark text-white">Título</th>
+              <th className="w-50  mb-2 bg-dark text-white p-3">Resumo</th>
+              <th className="p-3 mb-2 bg-dark text-white">Autor</th>
+              <th className="p-3 mb-2 bg-dark text-white">Editora</th>
             </tr>
           </thead>
           <tbody>
