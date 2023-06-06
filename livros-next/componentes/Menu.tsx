@@ -7,7 +7,7 @@ const Menu: React.FC = () => {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link" href="index.tsx" passHref>Home</Link>
+              <Link className="nav-link" href="/" passHref>Home</Link>
             </li>
             <li className="nav-item">
               <Link  className="nav-link" href="/LivroLista" passHref>Catálogo</Link>

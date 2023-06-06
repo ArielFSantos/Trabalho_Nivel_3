@@ -39,18 +39,18 @@ const LivroLista:NextPage = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Livro Lista</title>
       </Head>
       <Menu />
-      <main>
+      <main className="container">
         <h1>Página de Lista de Livros</h1>
         <table className="table table-striped">
           <thead>
             <tr>
               <th>Título</th>
-              <th>Resumo</th>
+              <th className="w-50 p-2">Resumo</th>
               <th>Autor</th>
               <th>Editora</th>
               <th>Ações</th>

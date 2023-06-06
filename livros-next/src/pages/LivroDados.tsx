@@ -5,6 +5,8 @@ import {Livro} from '../../classes/modelo/Livro'
 import Head from 'next/head';
 import Menu from '../../componentes/Menu';
 import styles from '../styles/Home.module.css';
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 const LivroDados: React.FC = () => {
   const controleEditora = new ControleEditora();
@@ -60,12 +62,12 @@ const LivroDados: React.FC = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div >
       <Head>
         <title>Livro Dados</title>
       </Head>
       <Menu />
-      <main>
+      <main className="container" >
         <h1>Página de Dados do Livro</h1>
         <form onSubmit={incluir}>
           <div>
