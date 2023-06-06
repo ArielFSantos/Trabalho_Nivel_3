@@ -4,8 +4,6 @@ import Menu from '../../componentes/Menu';
 import { NextPage } from 'next';
 import React from 'react';
 
-
-
 const baseURL = "http://localhost:3000/api/livros";
 
 const obter = async () => {
@@ -14,8 +12,12 @@ const obter = async () => {
 };
 
 const excluirLivro = async (codigo: number) => {
-  const resposta = await fetch(`${baseURL}/${codigo}`, {
+  const resposta = await fetch(baseURL, {
     method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    
   });
   return resposta.ok;
 };
@@ -36,11 +38,11 @@ const LivroLista:NextPage = () => {
   const excluir = async (codigo: number) => {
     const excluidoComSucesso = await excluirLivro(codigo);
     if (excluidoComSucesso) {
-      setLivros(livros.filter((livro: any) => livro.codigo !== codigo));
+      const livrosAtualizados = livros.filter((livro: any) => livro.codigo !== codigo);
+      setLivros(livrosAtualizados);
     }
   };
   
-
   return (
     <div>
       <Head>
@@ -63,12 +65,11 @@ const LivroLista:NextPage = () => {
               <tr key={livro.codigo}>
                 <td>{livro.titulo} <br />
                 <button
-                    type="button"
-                    className="btn btn-danger"
-                    onClick={() => excluir(livro.codigo)}
-                  >
-                    Excluir
-                  </button></td>
+                  type="button"
+                  className="btn btn-danger"
+                  onClick={() => excluir(livro.codigo)}>Excluir</button>
+
+                  </td>
                 <td>{livro.resumo}</td>
                 <td>{livro.autor}</td>
                 <td>{livro.editora}</td>

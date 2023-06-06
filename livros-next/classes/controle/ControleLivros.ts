@@ -8,7 +8,7 @@ let livros: Array<Livro> = [
     titulo: 'O Senhor dos Anéis',
     resumo:'Em uma terra fantástica e única, um hobbit recebe de presente de seu tio um anel mágico e maligno que precisa ser destruído antes que caia nas mãos do mal. Para isso, o hobbit Frodo tem um caminho árduo pela frente, onde encontra perigo, medo e seres bizarros.',
     autor: ['J.R.R. Tolkien'],
-    ano:1937,
+    
  
  
   },
@@ -19,7 +19,7 @@ let livros: Array<Livro> = [
     titulo: 'Duna',
     resumo:'Paul Atreides é um jovem brilhante, dono de um destino além de sua compreensão. Ele deve viajar para o planeta mais perigoso do universo para garantir o futuro de seu povo.',
     autor: ['Frank Herbert'],
-    ano:1965,
+
 
   },
   {
@@ -29,7 +29,7 @@ let livros: Array<Livro> = [
     titulo: 'O Iluminado',
     resumo:'Jack Torrance se torna caseiro de inverno do isolado Hotel Overlook, nas montanhas do Colorado, na esperança de curar seu bloqueio de escritor. Ele se instala com a esposa Wendy e o filho Danny, que é atormentando por premonições.',
     autor: ['Stephen King'],
-    ano:1977,
+
   }
 ];
 
